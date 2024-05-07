@@ -1,0 +1,300 @@
+﻿@using DataAccess.DAO;
+@*@model IEnumerable<Business.Models.IntermediateOrder>*@
+<style>
+    .container {
+        border: 1px solid #ddd;
+        padding: 10px;
+        max-height: 700px; /* Đặt chiều cao tối đa cho khung */
+        overflow-y: auto; /* Thêm thanh cuộn dọc nếu nội dung vượt quá kích thước */
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+    .table-hover tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+
+
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .container {
+        border: 1px solid #ddd;
+        padding: 10px;
+        max-height: 700px; /* Đặt chiều cao tối đa cho khung */
+        overflow-y: auto; /* Thêm thanh cuộn dọc nếu nội dung vượt quá kích thước */
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+    .table-hover tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+    .table th {
+        background-color: #f2f2f2;
+        text-align: left;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+
+
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .container {
+        border: 1px solid #ddd;
+        padding: 10px;
+        max-height: 700px; /* Đặt chiều cao tối đa cho khung */
+        overflow-y: auto; /* Thêm thanh cuộn dọc nếu nội dung vượt quá kích thước */
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+    .table-hover tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+</style>
+
+<h1>Chợ Trung Gian</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th><input class="form-control" value="" placeholder="Search Id" /></th>
+            <th><input class="form-control" value="" placeholder="Chủ đề trung gian" /></th>
+            <th><input class="form-control" value="" placeholder="Giá tiền" /></th>
+            <th><input class="form-control" value="" placeholder="Trạng thái" /></th>
+            <th></th>
+            <th><input class="form-control" value="" placeholder="Người bán" /></th>
+            <th><input class="form-control" value="" placeholder="Thời gian tạo" /></th>
+            <th><input class="form-control" value="" placeholder="Thời gian cập nhật" /></th>
+            <th><button class="btn btn-primary" id="searchButton">Tìm kiếm</button></th>
+
+        </tr>
+        <tr>
+            <th>Mã trung gian</th>
+            <th>Chủ đề trung gian</th>
+            <th>Giá tiền</th>
+            <th>Trạng Thái</th>
+            <th>Tổng phí cần mua</th>
+            <th>Người bán</th>
+            <th>Thời gian tạo</th>
+            <th>Cập nhật cuối</th>
+            <th>Hành động</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @*        @foreach (var item in Model)
+        {
+        <tr>
+        <td>@item.id</td>
+        <td>@item.name</td>
+        <td>@item.price</td>
+        <td>@item.status</td>
+        <td>@item.payment_amount</td>
+        <td>@AccountDAO.GetAccountWithId(item.create_by).name</td>
+        <td>@item.create_at.ToString("dd/MM/yyyy")</td>
+        <td>@item.update_at.ToString("dd/MM/yyyy")</td>
+        <td><a class="btn btn-primary open-modal" data-id="@item.id">Chi tiết</a></td>
+        </tr>
+        }*@
+    </tbody>
+</table>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center" id="paginationList">
+        <li class="page-item disabled" id="prevPage">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <!-- Các nút trang sẽ được thêm vào đây bằng mã JavaScript -->
+        <li class="page-item" id="nextPage">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>
+<!-- Modal -->
+<div class="modal fade" id="DetailOrderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="https://kit.fontawesome.com/6ae4d71e22.js" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        var currentPage = 1; // Trang hiện tại
+        var itemsPerPage = 5; // Số phần tử trên mỗi trang
+        var totalItems = 0; // Tổng số phần tử
+        var totalPages = 0; // Tổng số trang
+
+        // Hàm để tải dữ liệu cho trang cụ thể
+        function loadData(page) {
+            $.ajax({
+                url: '/IntermediateOrders/ListOrders', // Thay ControllerName và ActionName bằng tên thực tế của controller và action xử lý yêu cầu
+                type: 'GET',
+                dataType: 'json',
+                data: { page: page, itemsPerPage: itemsPerPage },
+                success: function (data) {
+                    $('tbody').empty(); // Xóa dữ liệu cũ trước khi thêm mới
+
+                    // Xử lý dữ liệu trả về từ máy chủ
+                    $.each(data.items, function (index, item) {
+                        var newRow = $('<tr>');
+                        newRow.append('<td>' + item.id + '</td>');
+                        newRow.append('<td>' + item.name + '</td>');
+                        newRow.append('<td>' + item.price + '</td>');
+                        newRow.append('<td>' + item.status + '</td>');
+                        newRow.append('<td>' + item.payment_amount + '</td>');
+                        newRow.append('<td>' + item.accountName + '</td>');
+                        newRow.append('<td>' + item.create_at + '</td>');
+                        newRow.append('<td>' + item.update_at + '</td>');
+                        newRow.append('<td><a class="btn btn-primary open-modal" data-id="' + item.id + '">Chi tiết</a></td>');
+                        $('tbody').append(newRow);
+                    });
+
+                    // Cập nhật thông tin phân trang
+                    currentPage = data.currentPage;
+                    totalPages = data.totalPages;
+
+                    // Xóa các nút trang hiện có trước khi thêm mới
+                    $('#paginationList').find('.page-number').remove();
+
+                    // Thêm các nút trang mới
+                    for (var i = 1; i <= totalPages; i++) {
+                        var pageItem = $('<li class="page-item page-number"><a class="page-link" href="#">' + i + '</a></li>');
+                        pageItem.click(function () {
+                            var pageNum = $(this).text();
+                            loadData(pageNum);
+                        });
+                        $('#nextPage').before(pageItem);
+                    }
+
+                    // Cập nhật trạng thái của nút "Previous" và "Next"
+                    if (currentPage === 1) {
+                        $('#prevPage').addClass('disabled');
+                    } else {
+                        $('#prevPage').removeClass('disabled');
+                    }
+
+                    if (currentPage === totalPages) {
+                        $('#nextPage').addClass('disabled');
+                    } else {
+                        $('#nextPage').removeClass('disabled');
+                    }
+                }
+            });
+        }
+
+        // Tải dữ liệu cho trang đầu tiên khi trang web được tải
+        loadData(currentPage);
+
+        // Sự kiện click cho nút Trang trước
+        $('#prevPage').click(function () {
+            if (currentPage > 1) {
+                currentPage--;
+                loadData(currentPage);
+            }
+        });
+
+        // Sự kiện click cho nút Trang tiếp theo
+        $('#nextPage').click(function () {
+            if (currentPage < totalPages) {
+                currentPage++;
+                loadData(currentPage);
+            }
+        });
+
+        // Sự kiện click cho nút tìm kiếm
+        $('#searchButton').click(function () {
+            var searchText = $('#searchInput').val();
+            loadData(1, searchText); // Bắt đầu từ trang đầu tiên khi thực hiện tìm kiếm
+        });
+
+
+        //Load Event Buy
+        $('tbody').on('click', '.open-modal', function () {
+            console.log("HEHE")
+            var id = $(this).data('id');
+
+            // Gửi yêu cầu AJAX để lấy thông tin của IntermediateOrder
+            $.ajax({
+                type: 'GET',
+                url: '/IntermediateOrders/MarketDetail',
+                data: { id: id },
+                success: function (data) {
+                    $(".modal-dialog").html(
+                        data
+                    );
+
+                    // Mở modal
+                    $("#DetailOrderModal").modal('show');
+                },
+                error: function (xhr, status, error) {
+                    // Xử lý lỗi nếu có
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+    });
+
+</script>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

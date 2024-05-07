@@ -1,0 +1,44 @@
+﻿@using DataAccess.DAO;
+@model IEnumerable<Business.Models.Withdrawal>
+
+<a class="btn btn-primary open-modal">Tạo đơn rút tiền</a>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Mã yêu cầu</th>
+            <th>Trạng thái</th>
+            <th>Số tiền rút</th>
+            <th>Số tài khoản</th>
+            <th>Chủ tài khoản</th>
+            <th>Tên ngân hàng</th>
+            <th>Thời gian tạo</th>
+            <th>Cập nhật cuối</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.state</td>
+                <td>@item.amount</td>
+                <td>@item.bank_number</td>
+                <td>@item.bank_user</td>
+                <td>@item.bank_name</td>
+                <td>@item.create_at.ToString("dd/MM/yyyy")</td>
+                <td>@item.update_at.ToString("dd/MM/yyyy")</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="https://kit.fontawesome.com/6ae4d71e22.js" crossorigin="anonymous"></script>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

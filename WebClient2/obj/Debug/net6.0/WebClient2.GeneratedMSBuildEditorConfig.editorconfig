@@ -1,0 +1,155 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebClient2
+build_property.RootNamespace = WebClient2
+build_property.ProjectDir = C:\SWP391\Projects\WebClient2\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\SWP391\Projects\WebClient2
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/SWP391/Projects/WebClient2/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Account/Wallet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxXYWxsZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Admin/DepositManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVwb3NpdE1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Admin/DetailOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Admin/DetailUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Admin/DetailWithdrawal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsV2l0aGRyYXdhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Admin/InterOrderManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW50ZXJPcmRlck1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Admin/UserManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlck1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Admin/WithdrawalManage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cV2l0aGRyYXdhbE1hbmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Admin/_ModalOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX01vZGFsT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Deposits/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3NpdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Deposits/PaymentCallBack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3NpdHNcUGF5bWVudENhbGxCYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Deposits/PaymentFail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3NpdHNcUGF5bWVudEZhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Deposits/PaymentSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3NpdHNcUGF5bWVudFN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Home/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Home/ForgotPasswordNotification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3Jnb3RQYXNzd29yZE5vdGlmaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/IntermediateOrders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJtZWRpYXRlT3JkZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/IntermediateOrders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJtZWRpYXRlT3JkZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/IntermediateOrders/Market.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJtZWRpYXRlT3JkZXJzXE1hcmtldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/IntermediateOrders/OrderBuy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJtZWRpYXRlT3JkZXJzXE9yZGVyQnV5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/IntermediateOrders/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJtZWRpYXRlT3JkZXJzXE9yZGVyRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/IntermediateOrders/OrderSell.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJtZWRpYXRlT3JkZXJzXE9yZGVyU2VsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/IntermediateOrders/_ModalOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJtZWRpYXRlT3JkZXJzXF9Nb2RhbE9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Withdrawals/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2l0aGRyYXdhbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Withdrawals/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2l0aGRyYXdhbHNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SWP391/Projects/WebClient2/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-yuhip25paf

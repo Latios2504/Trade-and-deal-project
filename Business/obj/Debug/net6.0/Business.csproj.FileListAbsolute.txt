@@ -1,0 +1,15 @@
+C:\SWP391\Projects\Business\bin\Debug\net6.0\Business.deps.json
+C:\SWP391\Projects\Business\bin\Debug\net6.0\Business.runtimeconfig.json
+C:\SWP391\Projects\Business\bin\Debug\net6.0\Business.dll
+C:\SWP391\Projects\Business\bin\Debug\net6.0\Business.pdb
+C:\SWP391\Projects\Business\obj\Debug\net6.0\Business.csproj.AssemblyReference.cache
+C:\SWP391\Projects\Business\obj\Debug\net6.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\SWP391\Projects\Business\obj\Debug\net6.0\Business.AssemblyInfoInputs.cache
+C:\SWP391\Projects\Business\obj\Debug\net6.0\Business.AssemblyInfo.cs
+C:\SWP391\Projects\Business\obj\Debug\net6.0\Business.csproj.CoreCompileInputs.cache
+C:\SWP391\Projects\Business\obj\Debug\net6.0\Business.sourcelink.json
+C:\SWP391\Projects\Business\obj\Debug\net6.0\Business.dll
+C:\SWP391\Projects\Business\obj\Debug\net6.0\refint\Business.dll
+C:\SWP391\Projects\Business\obj\Debug\net6.0\Business.pdb
+C:\SWP391\Projects\Business\obj\Debug\net6.0\Business.genruntimeconfig.cache
+C:\SWP391\Projects\Business\obj\Debug\net6.0\ref\Business.dll
